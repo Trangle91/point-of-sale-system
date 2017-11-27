@@ -4,9 +4,9 @@ public class Item {
 	protected int uniqueID;
 	protected String supplier;
 	protected double price;
-//	protected State state;
-	
-	public Item(){
-		
+	protected String state;
+
+	public Item() {
+
 	}
 }
