@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Item_List
 {
-	ArrayList<Item> ItemList = new ArrayList<Item>();
+	private ArrayList<Item> ItemList = new ArrayList<Item>();
 	
 	public ArrayList<Item> GetItemList()
 	{
