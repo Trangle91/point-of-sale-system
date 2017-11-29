@@ -62,7 +62,7 @@ public class Sell extends JFrame {
 		labelSaleTitle.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		labelSaleTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		JLabel labelItem = new JLabel("Item");
+		JLabel labelItem = new JLabel("Item Number");
 		
 		JLabel labelQuantity = new JLabel("Quantity");
 		
