@@ -76,7 +76,7 @@ public class Sell extends JFrame {
 		
 		JScrollBar scrollBar = new JScrollBar();
 		
-		JButton btnAddToList = new JButton("Add To List");
+		JButton btnAddToInvoice = new JButton("Add To Invoice");
 		
 		JButton btnAddAnotherItem = new JButton("Add Another Item");
 		
@@ -109,7 +109,7 @@ public class Sell extends JFrame {
 							.addGroup(gl_panel.createSequentialGroup()
 								.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING, false)
 									.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
-										.addComponent(btnAddToList)
+										.addComponent(btnAddToInvoice)
 										.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 										.addComponent(btnAddAnotherItem))
 									.addComponent(scrollPane, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 340, GroupLayout.PREFERRED_SIZE)
@@ -135,7 +135,7 @@ public class Sell extends JFrame {
 						.addComponent(scrollPane, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnAddToList)
+						.addComponent(btnAddToInvoice)
 						.addComponent(btnAddAnotherItem))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
