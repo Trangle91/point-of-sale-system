@@ -7,8 +7,8 @@ public class Register
 	private double salesAmount;
 	private String employeeUser;
 	private int registerNumber;
-	private ArrayList<Item> Return_List = ArrayList<Item>();
-	private ArrayList<Item> Sell_List = ArrayList<Item>();
+	private ArrayList<Item> Return_List = new ArrayList<Item>();
+	private ArrayList<Item> Sell_List = new ArrayList<Item>();
 
 	public Register() 
 	{
