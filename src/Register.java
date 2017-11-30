@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Register 
 {
@@ -6,28 +7,73 @@ public class Register
 	private double salesAmount;
 	private String employeeUser;
 	private int registerNumber;
+	private ArrayList<Item> Return_List = ArrayList<Item>();
+	private ArrayList<Item> Sell_List = ArrayList<Item>();
 
 	public Register() 
 	{
-
+		
 	}
 
-	public void returnItem(Item item) 
+	public void ReturnItem(Item item) 
 	{
 		//Add item to inventory item list
-		//subtract salesAmount by item value
+		Return_List.add(item);
 	}
 
 	public void sellItem(Item item) 
 	{
 		//Add item to temp list because we want to allow cancellation (once they hit complete order it will remove these items from the inventory)
-		//add salesAmount by item value
+		Sell_List.add(item);
 	}
 
-	public void cancelOrder() 
+	public void CancelOrder() 
 	{
 		//GUI button action that will delete the temp buffer
-		//remove price of temp list cost value from salesAmount
+		ClearReturnList();
+		ClearSellList();
+	}
+	
+	public void CompleteSellOrder()
+	{
+		if(!Sell_List.isEmpty())
+		{
+			for(Item i : Sell_List)
+			{
+				salesAmount += i.GetPrice();
+			}
+		}
+	}
+	
+	public void CompleteReturnOrder()
+	{
+		if(!Return_List.isEmpty())
+		{
+			for(Item i : Return_List)
+			{
+				salesAmount -= i.GetPrice();
+			}
+		}
+	}
+	
+	public void ClearReturnList()
+	{
+		Return_List.clear();
+	}
+	
+	public void ClearSellList()
+	{
+		Sell_List.clear();
+	}
+	
+	public ArrayList<Item> GetReturnList()
+	{
+		return Return_List;
+	}
+	
+	public ArrayList<Item> GetSellList()
+	{
+		return Sell_List;
 	}
 
 	public String getLogInTime() 
@@ -35,22 +81,22 @@ public class Register
 		return logInTime;
 	}
 
-	public void setLogInTime(String logInTime) 
+	public void SetLogInTime(String logInTime) 
 	{
 		this.logInTime = logInTime;
 	}
 
-	public String getLogOutTime() 
+	public String GetLogOutTime() 
 	{
 		return logOutTime;
 	}
 
-	public void setLogOutTime(String logOutTime) 
+	public void SetLogOutTime(String logOutTime) 
 	{
 		this.logOutTime = logOutTime;
 	}
 
-	public double getSalesAmount() 
+	public double GetSalesAmount() 
 	{
 		return salesAmount;
 	}
@@ -65,22 +111,22 @@ public class Register
 		salesAmount -= value;
 	}
 
-	public String getEmployeeUser() 
+	public String GetEmployeeUser() 
 	{
 		return employeeUser;
 	}
 
-	public void setEmployeeUser(String employeeUser) 
+	public void SetEmployeeUser(String employeeUser) 
 	{
 		this.employeeUser = employeeUser;
 	}
 
-	public int getRegisterNumber() 
+	public int GetRegisterNumber() 
 	{
 		return registerNumber;
 	}
 
-	public void setRegisterNumber(int registerNumber) 
+	public void SetRegisterNumber(int registerNumber) 
 	{
 		this.registerNumber = registerNumber;
 	}
